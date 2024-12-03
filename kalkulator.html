@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Do Hoang Son Levente">
+    <meta name="description" content="Utazási Iroda Weboldal Főoldala">
+    <meta name="copyright" content="Oktatási célokra">
+    <link rel="stylesheet" href="keleti_kaland_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"><!--favicon-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"><!--slick-képgaléria-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--webfont-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Keleti Kaland</title>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="header">
+            <div class="headerbal">Keleti Kaland</div>
+            <div class="headerjobb">Utazási Iroda</div>
+        </a>
+    <div class="nav">
+        <a href="index.html">Főoldal</a>
+        <a href="szervezett_utazas.html">Szervezett Utazás</a>
+        <a href="#.html" class="current">Költség Kalkulátor</a>
+        <a href="foglalas.html">Foglalj Most!</a>
+    </div>
+
+    <div class="segitunk">Kíváncsi vagy mennyibe kerülne az utazás?</div>
+    <div class="kalkulator_form">
+        <form action="#">
+            <label for="orszag">Melyik országba utaznál?</label>
+            <select name="melyik_orszag" id="orszag" class="bevitel">
+                <option value="Kína">Kína</option>
+                <option value="Vietnám">Vietnám</option>
+                <option value="Japán">Japán</option>
+            </select>
+            <p>Szervezett utazásra szeretne jelentkezni?</p>
+            <label for="szervezett" class="radio_gomb">Igen</label>
+            <input class="radio_gomb bevitel" type="radio" name="szervezett" id="szervezett">
+            <label for="nem_szervezett" class="radio_gomb">Nem</label>
+            <input class="radio_gomb bevitel" type="radio" name="szervezett" id="nem_szervezett">
+
+            <label for="fo">Hány fős lenne az utazás?</label>
+            1<input name="fo" type="range" min="1" max="10" value="5" id="fo" class="bevitel csuszka">10
+
+            <label for="indulas">Indulás napja:</label>
+            <input name="indulas" type="date" id="indulas" class="bevitel" value="2024-12-03">
+
+            <label for="erkezes">Hazaérkezés napja:</label>
+            <input name="erkezes" type="date" id="erkezes" class="bevitel" value="2024-12-03">
+
+            <label for="promo">Promóciós kód (20% kedvezmény):</label>
+            <input type="text" name="promo" placeholder="123" id="promo"
+                class="bevitel"><!--Tudom, hogy nem szabad kiírni a promóciós kódot.-->
+
+            <div class="gombok">
+                <input type="button" id="mehet" class="gomb" value="Mehet">
+                <input type="reset" value="Alaphelyzet" class="gomb">
+            </div>
+            <div id="vegosszeg_kiiras"></div>
+        </form>
+    </div>
+    <script src="kalkulator.js"></script>
+    <div class="footer">
+        <table>
+            <tr><td>Kérdésed van? Vedd fel velünk a kapcsolatot!</td></tr>
+            <tr><td>Lépj kapcsolatba velünk, hogy segíthessünk megtervezni álmaid utazását!</td></tr>
+            <tr><td>Email: info@asiantravel.com</td></tr>
+            <tr><td>Cím: Budapest, Ázsia út 10.</td></tr>
+            <tr><td>Telefon: +36-30-123-4567</td></tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

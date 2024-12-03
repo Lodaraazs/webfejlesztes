@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Do Hoang Son Levente">
+    <meta name="description" content="Utazási Iroda Weboldal Főoldala">
+    <meta name="copyright" content="Oktatási célokra">
+    <link rel="stylesheet" href="keleti_kaland_style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"><!--favicon-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"><!--slick-képgaléria-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--webfont-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#foglalas").validate({
+                rules: {
+                    vezeteknev: "required",
+                    keresztnev: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                        minlength: 5
+                    },
+                    telefonszam: {
+                        required: true,
+                        minlength: 11
+                    },
+                    utlevel: {
+                        required: true,
+                        minlength: 9,
+                        maxlength: 9
+                    },
+                    uticel: "required",
+                    egyeb:{required:false}
+                },
+                messages: {
+                    vezeteknev: "Írd be a vezetéknevedet!",
+                    keresztnev: "Írd be a keresztnevedet!",
+                    email: {
+                        required: "Add meg az e-mail címedet!",
+                        email: "Valós e-mail címet adj meg!",
+                        minlength: "Valós e-mail címet adj meg, ez túl rövid!"
+                    },
+                    telefonszam: {
+                        required: "Add meg a telefonszámodat, hogy fel tudjuk veled venni a kapcsolatot!",
+                        minlength: "Valós telefonszámot adj meg, ez túl rövid!"
+                    },
+                    utlevel: {
+                        required: "Add meg az útlevél számodat!",
+                        minlength: "Valós útlevél számot adj meg, ez túl rövid!",
+                        maxlength: "Valós útlevél számot adj meg, ez túl hosszú!"
+                    },
+                    uticel: "Kérlek válassz egy úti célt!"
+                }
+            });
+        });
+        </script>
+        <style>
+            label.error {
+            color: #001427;
+            text-decoration: underline red;
+            }
+        </style>
+    <title>Keleti Kaland</title>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="header">
+            <div class="headerbal">Keleti Kaland</div>
+            <div class="headerjobb">Utazási Iroda</div>
+        </a>
+        <div class="nav">
+            <a href="index.html">Főoldal</a>
+            <a href="szervezett_utazas.html">Szervezett Utazás</a>
+            <a href="kalkulator.html">Költség Kalkulátor</a>
+            <a href="#.html" class="current">Foglalj Most!</a>
+        </div>
+
+        <div class="kalkulator_form">
+            <p>Add meg a foglalási adataidat és mi felvesszük veled a kapcsolatot!</p>
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="foglalas" novalidate>
+                <label for="vezeteknev">Vezetéknév:</label>
+                <input type="text" name="vezeteknev" class="bevitel" id="vezeteknev">
+
+                <label for="keresztnev">Keresztnév:</label>
+                <input type="text" name="keresztnev" class="bevitel" id="keresztnev">
+
+                <label for="email">E-mail cím:</label>
+                <input type="email" name="email" class="bevitel" id="email">
+
+                <label for="telefonszam">Telefonszám:</label>
+                <input type="text" name="telefonszam" id="telefonszam" class="bevitel" placeholder="06301234567">
+
+                <label for="utlevel">Útlevél száma:</label>
+                <input type="text" name="utlevel" id="utlevel" class="bevitel">
+
+                <label for="uticel">Úti cél:</label>
+                <input type="text" list="uticel" name="uticel" placeholder="Add meg az uti célodat!" class="bevitel">
+                <datalist id="uticel">
+                    <option value="Vietnám">
+                    <option value="Kína">
+                    <option value="Japán">
+                </datalist>
+
+                <p>Van különleges igénye?</p>
+
+                <label for="idegenvezeto">Helyi idegenvezető</label>
+                <input type="checkbox" name="idegenvezeto" id="idegenvezeto" value="igem">
+
+                <label for="luxus_szallas">Luxus szálláshely</label>
+                <input type="checkbox" name="luxus_szallas" id="luxus_szallas" value="igen">
+
+                <label for="vip_transzfer">VIP reptéri transzfer</label>
+                <input type="checkbox" id="vip_transzfer" name="vip_transzfer" value="igen">
+
+
+                <label for="egyeb">Egyéb különleges kérése van?</label>
+                <textarea id="egyeb" name="egyeb" placeholder="Ha lenne esetleg bármilyen különleges kérése, írja meg nekünk itt nyugodtan!" class="bevitel"></textarea>
+
+                <div class="gombok">
+                    <input type="submit" value="Elküldés">
+                    <input type="reset" value="Alaphelyzet">
+                </div>
+                
+                <!--Név E-mail, Útlevélszám, Telefonszám, Úti cél (radio), -->
+            </form>
+        </div>
+
+    <div class="footer">
+        <table>
+            <tr><td>Kérdésed van? Vedd fel velünk a kapcsolatot!</td></tr>
+            <tr><td>Lépj kapcsolatba velünk, hogy segíthessünk megtervezni álmaid utazását!</td></tr>
+            <tr><td>Email: info@asiantravel.com</td></tr>
+            <tr><td>Cím: Budapest, Ázsia út 10.</td></tr>
+            <tr><td>Telefon: +36-30-123-4567</td></tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

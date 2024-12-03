@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Do Hoang Son Levente">
+    <meta name="description" content="Utazási Iroda Weboldal Főoldala">
+    <meta name="copyright" content="Oktatási célokra">
+    <link rel="stylesheet" href="keleti_kaland_style.css">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon"><!--favicon-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"><!--slick-képgaléria-->
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--webfont-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Keleti Kaland</title>
+    <style>
+        .kep_galeria {
+            border: solid #F4D58D 5px;
+            font-size: 20px;
+            width: 100%;
+            min-width: 400px;
+            margin: 10px auto;
+            padding: 1%;
+        }
+        .slick-slide {
+            margin: 5px;
+        }
+        .slick-slide img {
+            width: 100%;
+            border-radius: 10%;
+        }
+        .slick-prev::before, .slick-next:before{
+            color: #F4D58D;
+        }
+        .slick-slide{
+            transition: all ease-in-out 1s;
+            opacity: .1;
+        }
+        .slick-active {
+            opacity: .4;
+        }
+        .slick-current {
+            opacity: 1;
+        }
+        .slick-dots li button:before{
+            color: #F4D58D;
+        }
+        .slick-dots li.slick-active button:before{
+            color: #001427;
+        }
+        @media only screen and (min-width: 600px) /*Tablet*/{
+            .kep_galeria {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="header">
+            <div class="headerbal">Keleti Kaland</div>
+            <div class="headerjobb">Utazási Iroda</div>
+        </a>
+        
+        <div class="nav">
+            <a href="index.html">Főoldal</a>
+            <a href="#" class="current">Szervezett Utazás</a>
+            <a href="kalkulator.html">Költség Kalkulátor</a>
+            <a href="foglalas.html">Foglalj Most!</a>
+        </div>
+        
+        <div class="hero">
+            <div class="cim">Fedezd fel Ázsia varázslatos világát!</div>
+            <div class="alcim">Tervezd meg velünk életed kalandját! Egyedi utazások, ikonikus helyszínek, és felejthetetlen élmények várnak rád.</div>
+        </div>
+
+
+        <div class="uti_celok">Szervezett utaink:</div>
+        <div class="szervezett_ut_leiras">Fedezd fel Vietnám varázslatos városait velünk!</div>
+        <section class="kep_galeria">
+            <div><img src="images/hanoi.jpg" alt="Kép Ha Noi-ról" title="Ha Noi">Hanoi: A kaland a nyüzsgő fővárosban kezdődik, ahol a tradicionális utcák és a modern városi élet találkozik. Fedezd fel a Hoan Kiem-tavat és a híres Óvárost!</div>
+            <div><img src="images/ha-long.avif" alt="Kép Ha Long-ról" title="Ha Long">Ha Long: Utazás a lenyűgöző Ha Long-öbölbe, ahol hajókirándulás során csodálhatod meg a mészkőszigeteket és a kristálytiszta vizet.</div>
+            <div><img src="images/saigon.jpg" alt="Kép Saigon-ról" title="Saigon">Ho Si Minh-város: Éld át Vietnám legnyüzsgőbb városának pezsgő életét! Fedezd fel a Reunifikációs Palotát, a Notre Dame-katedrálist és a város modern ázsiai arcát.</div>
+            <div><img src="images/sapa.jpg" alt="Kép SaPa-ról" title="SaPa">Sa Pa: A hegyvidéki régió következik, ahol a teraszos rizsföldek és a helyi törzsek kultúrája kínál egyedi élményt.</div>
+            <div><img src="images/hoian.jpg" alt="Kép Hoi An-ról" title="Hoi An">Hoi An: Sétálj az óváros romantikus utcáin, ahol a lampionok fénye és a helyi piacok különleges hangulata vár rád.</div>
+            <div><img src="images/hue.jpg" alt="Kép Hue-ról" title="Hue">Hue: A császári városban a Nguyen-dinasztia történelmét és a Perfume-folyó menti látványosságokat fedezheted fel.</div>
+            <div><img src="images/danang.jpg" alt="Kép Da Nang-ról" title="Da Nang">Da Nang: Látogass el az ikonikus Arany Hídhoz, és élvezd a város modern atmoszféráját.</div>
+            <div><img src="images/nhatrang.jpg" alt="Kép Nha Trang-ról" title="Nha Trang">Zárd az utazást a tengerparton, ahol a kristálytiszta víz és a fehér homokos strandok tökéletes kikapcsolódást nyújtanak.</div>
+        </section>
+        <div class="szervezett_ut_leiras">Csatlakozz hozzánk, és éld át Vietnám szépségeit és változatosságát egy emlékezetes utazás során!</div>
+        <div class="szervezett_foglalas">
+            <a href="foglalas.html">Foglalj most!</a>
+        </div>
+
+        <hr><!--Kína-->
+
+        <div class="szervezett_ut_leiras">Fedezd fel Kína kulturális és természeti csodáit velünk!</div>
+        <section class="kep_galeria">
+            <div><img src="images/peking.jpg" alt="Kép Peking-ról" title="Peking">Az utazás a fővárosban kezdődik, ahol a Tiltott Város és a Tiananmen tér a kínai történelem grandiózus emlékei. Sétálj a Kínai Nagy Fal ikonikus szakaszán!</div>
+            <div><img src="images/xian.jpg" alt="Kép Xi'an-ról" title="Xi'an">Xi'an: Fedezd fel a híres agyaghadsereget, amely a világ egyik legfontosabb régészeti lelete, és merülj el a Selyemút történelmi hangulatában.</div>
+            <div><img src="images/shanghai.jpg" alt="Kép Sanghaj-ról" title="Sanghaj">Sanghaj: A modern metropolisz futurisztikus felhőkarcolóival és a Bund gyarmati stílusú épületeivel a tradíció és az innováció tökéletes keveréke.</div>
+            <div><img src="images/hangzhou.jpg" alt="Kép Hangzhou-ról" title="Hangzhou">Hangzhou: Barangolj a Nyugati-tó partján, amely Kína egyik legromantikusabb természeti helyszíne, és élvezd a híres zöld teát.</div>
+            <div><img src="images/guilin.jpg" alt="Kép Guilin-ról" title="Guilin">Guilin: Látogass el a lenyűgöző mészkőhegyeiről híres régióba, ahol a Li-folyó menti hajókirándulás felejthetetlen élményt nyújt.</div>
+            <div><img src="images/chengdu.jpg" alt="Kép Chengdu-ról" title="Chengdu">Chengdu: Ismerd meg a pandák hazáját, és fedezd fel a szecsuáni konyha fűszeres ízeit!</div>
+            <div><img src="images/hongkong.jpg" alt="Kép Hongkong-ról" title="Hongkong">Hongkong: A körutazást a vibráló Hongkongban zárjuk, ahol a modern városi élet és a tengerparti látványosságok varázsolják különlegessé az utolsó napokat.</div>
+        </section>
+        <div class="szervezett_ut_leiras">Kína minden állomása egy újabb fejezetet mesél el a világról. Foglalj most, és tapasztald meg személyesen ennek az ősi és mégis modern országnak a szépségeit!</div>
+        <div class="szervezett_foglalas">
+            <a href="foglalas.html">Foglalj most!</a>
+        </div>
+
+        <hr><!--Japán-->
+
+        <div class="szervezett_ut_leiras">Fedezd fel Japán lenyűgöző világát velünk!</div>
+        <section class="kep_galeria">
+            <div><img src="images/tokio.jpg" alt="Kép Tokió-ról" title="Tokió">Tokió: Kezdd a kalandot a világ egyik legizgalmasabb metropoliszában, ahol a modern felhőkarcolók és a tradicionális szentélyek tökéletes harmóniában léteznek. Fedezd fel a Shibuya kereszteződést és a csodás Meiji-szentélyt!</div>
+            <div><img src="images/kioto.jpg" alt="Kép Kiotó-ról" title="Kiotó">Kiotó: Barangolj az ősi császári fővárosban, ahol a tradicionális teaházak, zenkertek és a híres Arany Pavilon elbűvölő látványt nyújtanak.</div>
+            <div><img src="images/osaka.jpg" alt="Kép Osaka-ról" title="Osaka">Osaka: Tapasztald meg a város pezsgő éjszakai életét és gasztronómiai különlegességeit, például a takoyakit és az okonomiyakit. Ne hagyd ki az Oszakai várat sem!</div>
+            <div><img src="images/nara.jpg" alt="Kép Nara-ról" title="Nara">Nara: Látogass el Japán első fővárosába, ahol szabadon sétáló szarvasok és a lenyűgöző Todai-ji templom vár rád.</div>
+            <div><img src="images/hiroshima.jpg" alt="Kép Hiroshima-ról" title="Hiroshima">Hiroshima: Merülj el a béke városának történelmében, és fedezd fel a Miyajima-sziget híres „úszó” torii kapuját.</div>
+            <div><img src="images/fuji.jpg" alt="Kép Fudzsi-hegyről" title="Fudzsi-hegy">Fudzsi-hegy: Gyönyörködj Japán ikonikus szimbólumában, a Fudzsi-hegyben, amely a természet szerelmeseinek paradicsoma.</div>
+            <div><img src="images/hokkaido.jpg" alt="Kép Hokkaidó-ról" title="Hokkaidó">Hokkaidó: Élvezd a lenyűgöző tájakat, a havas hegycsúcsokat és a termálforrásokat Japán északi szigetén.</div>
+        </section>
+        <div class="szervezett_ut_leiras">Foglalj most, és tapasztald meg Japán egyedülálló szépségeit, ahol a múlt és a jövő találkozik!</div>
+        <div class="szervezett_foglalas">
+            <a href="foglalas.html">Foglalj most!</a>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {/*Body OnLoad szerepét tölti be*/
+
+        $(".kep_galeria").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 7500,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                    dots: true,
+                    arrows: false,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                    dots: false,
+                    arrows: false,
+                    centerPadding: '20px',
+                    slidesToShow: 1}
+                }
+            ]
+        });
+    });
+    </script>
+        <div class="footer">
+            <table>
+                <tr><td>Kérdésed van? Vedd fel velünk a kapcsolatot!</td></tr>
+                <tr><td>Lépj kapcsolatba velünk, hogy segíthessünk megtervezni álmaid utazását!</td></tr>
+                <tr><td>Email: info@asiantravel.com</td></tr>
+                <tr><td>Cím: Budapest, Ázsia út 10.</td></tr>
+                <tr><td>Telefon: +36-30-123-4567</td></tr>
+            </table>
+        </div>
+</body>
+</html>
