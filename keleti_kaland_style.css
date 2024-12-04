@@ -236,6 +236,10 @@ hr{
     text-align: center;
 }
 
+#foglalas input{
+    height: 50px;
+}
+
 
 @media only screen and (min-width: 600px) /*Tablet*/
 {  
@@ -258,11 +262,7 @@ hr{
     .orszag:nth-child(2n){
         border-right: #F4D58D solid 5px;
     }
-
-    /*FŐOLDAL VÉGE*/
-
 }
-
 @media only screen and (min-width: 768px) /*Számítógép*/
 {
     .container{
